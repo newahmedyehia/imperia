@@ -2,6 +2,9 @@ from transformers import pipeline
 from PIL import Image
 
 import pytesseract
+import streamlit as st
+st.title("hello")
+st.header("Header")
 
 nlp = pipeline(
     "document-question-answering",

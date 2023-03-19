@@ -1,0 +1,16 @@
+
+import streamlit as st
+st.title("hello")
+
+
+from transformers import pipeline
+
+nlp = pipeline(
+    "document-question-answering",
+    model="impira/layoutlm-document-qa",
+)
+
+nlp(
+    "https://templates.invoicehome.com/invoice-template-us-neat-750px.png",
+    "What is the invoice number?"
+)
